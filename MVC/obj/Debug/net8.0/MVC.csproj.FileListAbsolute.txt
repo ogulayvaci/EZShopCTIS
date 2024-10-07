@@ -104,3 +104,4 @@
 /Users/ogulayvaci/Desktop/EZShopCTIS/MVC/obj/Debug/net8.0/MVC.csproj.AssemblyReference.cache
 /Users/ogulayvaci/Desktop/EZShopCTIS/MVC/bin/Debug/net8.0/Npgsql.dll
 /Users/ogulayvaci/Desktop/EZShopCTIS/MVC/bin/Debug/net8.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll
+/Users/ogulayvaci/Desktop/EZShopCTIS/MVC/obj/Debug/net8.0/MVC.sourcelink.json

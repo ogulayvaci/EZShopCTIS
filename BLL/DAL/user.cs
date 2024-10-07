@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BLL.DAL;
 
-public partial class users
+public partial class user
 {
     [Key]
     public int id { get; set; }
@@ -22,6 +22,6 @@ public partial class users
     public int roleid { get; set; }
 
     [ForeignKey("roleid")]
-    [InverseProperty("users")]
-    public virtual roles role { get; set; } = null!;
+    [InverseProperty("user")]
+    public virtual role role { get; set; } = null!;
 }

@@ -5,9 +5,11 @@ namespace BLL.Models;
 
 public class CategoryModel
 {
-    public categories Record { get; set; }
+    public category Record { get; set; }
 
     public String Name => Record.name;
 
     public String Description => Record.description;
+    
+    
 }

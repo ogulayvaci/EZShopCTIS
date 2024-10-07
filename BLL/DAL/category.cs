@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BLL.DAL;
 
-public partial class countries
+public partial class category
 {
     [Key]
     public int id { get; set; }
@@ -14,9 +14,8 @@ public partial class countries
     [StringLength(100)]
     public string name { get; set; } = null!;
 
-    [InverseProperty("country")]
-    public virtual ICollection<cities> cities { get; set; } = new List<cities>();
+    public string? description { get; set; }
 
-    [InverseProperty("country")]
-    public virtual ICollection<stores> stores { get; set; } = new List<stores>();
+    [InverseProperty("category")]
+    public virtual ICollection<product> products { get; set; } = new List<product>();
 }

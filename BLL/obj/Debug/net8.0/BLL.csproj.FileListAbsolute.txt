@@ -10,3 +10,4 @@
 /Users/ogulayvaci/Desktop/EZShopCTIS/BLL/obj/Debug/net8.0/BLL.pdb
 /Users/ogulayvaci/Desktop/EZShopCTIS/BLL/obj/Debug/net8.0/ref/BLL.dll
 /Users/ogulayvaci/Desktop/EZShopCTIS/BLL/obj/Debug/net8.0/BLL.csproj.AssemblyReference.cache
+/Users/ogulayvaci/Desktop/EZShopCTIS/BLL/obj/Debug/net8.0/BLL.sourcelink.json

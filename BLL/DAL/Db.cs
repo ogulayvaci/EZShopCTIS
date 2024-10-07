@@ -12,30 +12,30 @@ public partial class Db : DbContext
     {
     }
 
-    public virtual DbSet<categories> categories { get; set; }
+    public virtual DbSet<category> categories { get; set; }
 
-    public virtual DbSet<cities> cities { get; set; }
+    public virtual DbSet<city> cities { get; set; }
 
-    public virtual DbSet<countries> countries { get; set; }
+    public virtual DbSet<country> countries { get; set; }
 
-    public virtual DbSet<products> products { get; set; }
+    public virtual DbSet<product> products { get; set; }
 
-    public virtual DbSet<productstores> productstores { get; set; }
+    public virtual DbSet<productstore> productstores { get; set; }
 
-    public virtual DbSet<roles> roles { get; set; }
+    public virtual DbSet<role> roles { get; set; }
 
-    public virtual DbSet<stores> stores { get; set; }
+    public virtual DbSet<store> stores { get; set; }
 
-    public virtual DbSet<users> users { get; set; }
+    public virtual DbSet<user> users { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<categories>(entity =>
+        modelBuilder.Entity<category>(entity =>
         {
             entity.HasKey(e => e.id).HasName("categories_pkey");
         });
 
-        modelBuilder.Entity<cities>(entity =>
+        modelBuilder.Entity<city>(entity =>
         {
             entity.HasKey(e => e.id).HasName("cities_pkey");
 
@@ -44,12 +44,12 @@ public partial class Db : DbContext
                 .HasConstraintName("cities_countryid_fkey");
         });
 
-        modelBuilder.Entity<countries>(entity =>
+        modelBuilder.Entity<country>(entity =>
         {
             entity.HasKey(e => e.id).HasName("countries_pkey");
         });
 
-        modelBuilder.Entity<products>(entity =>
+        modelBuilder.Entity<product>(entity =>
         {
             entity.HasKey(e => e.id).HasName("products_pkey");
 
@@ -58,7 +58,7 @@ public partial class Db : DbContext
                 .HasConstraintName("products_categoryid_fkey");
         });
 
-        modelBuilder.Entity<productstores>(entity =>
+        modelBuilder.Entity<productstore>(entity =>
         {
             entity.HasKey(e => e.id).HasName("productstores_pkey");
 
@@ -71,12 +71,12 @@ public partial class Db : DbContext
                 .HasConstraintName("productstores_storeid_fkey");
         });
 
-        modelBuilder.Entity<roles>(entity =>
+        modelBuilder.Entity<role>(entity =>
         {
             entity.HasKey(e => e.id).HasName("roles_pkey");
         });
 
-        modelBuilder.Entity<stores>(entity =>
+        modelBuilder.Entity<store>(entity =>
         {
             entity.HasKey(e => e.id).HasName("stores_pkey");
 
@@ -85,7 +85,7 @@ public partial class Db : DbContext
             entity.HasOne(d => d.country).WithMany(p => p.stores).HasConstraintName("stores_countryid_fkey");
         });
 
-        modelBuilder.Entity<users>(entity =>
+        modelBuilder.Entity<user>(entity =>
         {
             entity.HasKey(e => e.id).HasName("users_pkey");
 

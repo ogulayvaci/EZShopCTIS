@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BLL.DAL;
 
-public partial class roles
+public partial class role
 {
     [Key]
     public int id { get; set; }
@@ -15,5 +15,5 @@ public partial class roles
     public string rolename { get; set; } = null!;
 
     [InverseProperty("role")]
-    public virtual ICollection<users> users { get; set; } = new List<users>();
+    public virtual ICollection<user> users { get; set; } = new List<user>();
 }

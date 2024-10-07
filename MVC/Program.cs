@@ -7,6 +7,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+// IOC (Inversion of Control) Container
 builder.Services.AddDbContext<Db>(optionsAction =>
     optionsAction.UseNpgsql("User ID=postgres;Password=patateskral;Host=localhost;Port=5432;Database=EZShopDB;"));
 

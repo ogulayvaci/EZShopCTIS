@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BLL.DAL;
 
-public partial class products
+public partial class product
 {
     [Key]
     public int id { get; set; }
@@ -25,9 +25,9 @@ public partial class products
     public int categoryid { get; set; }
 
     [ForeignKey("categoryid")]
-    [InverseProperty("products")]
-    public virtual categories category { get; set; } = null!;
+    [InverseProperty("product")]
+    public virtual category category { get; set; } = null!;
 
     [InverseProperty("product")]
-    public virtual ICollection<productstores> productstores { get; set; } = new List<productstores>();
+    public virtual ICollection<productstore> productstores { get; set; } = new List<productstore>();
 }
