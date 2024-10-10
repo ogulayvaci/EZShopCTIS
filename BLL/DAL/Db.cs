@@ -12,6 +12,11 @@ public partial class Db : DbContext
     {
     }
 
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     optionsBuilder.UseNpgsql("User ID=postgres;Password=patateskral;Host=localhost;Port=5432;Database=EZShopDB;");
+    // }
+
     public virtual DbSet<category> categories { get; set; }
 
     public virtual DbSet<city> cities { get; set; }

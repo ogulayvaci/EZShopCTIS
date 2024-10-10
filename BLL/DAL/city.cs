@@ -15,11 +15,8 @@ public partial class city
     public string name { get; set; } = null!;
 
     public int countryid { get; set; }
-
-    [ForeignKey("countryid")]
-    [InverseProperty("city")]
+    
     public virtual country country { get; set; } = null!;
-
-    [InverseProperty("city")]
+    
     public virtual ICollection<store> stores { get; set; } = new List<store>();
 }

@@ -20,14 +20,11 @@ public partial class store
 
     public int? cityid { get; set; }
 
-    [ForeignKey("cityid")]
-    [InverseProperty("store")]
     public virtual city? city { get; set; }
 
-    [ForeignKey("countryid")]
-    [InverseProperty("store")]
+
     public virtual country? country { get; set; }
 
-    [InverseProperty("store")]
+
     public virtual ICollection<productstore> productstores { get; set; } = new List<productstore>();
 }

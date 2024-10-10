@@ -21,7 +21,6 @@ public partial class user
 
     public int roleid { get; set; }
 
-    [ForeignKey("roleid")]
-    [InverseProperty("user")]
+  
     public virtual role role { get; set; } = null!;
 }

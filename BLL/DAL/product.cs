@@ -23,11 +23,8 @@ public partial class product
     public DateTime? expirationdate { get; set; }
 
     public int categoryid { get; set; }
-
-    [ForeignKey("categoryid")]
-    [InverseProperty("product")]
+    
     public virtual category category { get; set; } = null!;
-
-    [InverseProperty("product")]
+    
     public virtual ICollection<productstore> productstores { get; set; } = new List<productstore>();
 }

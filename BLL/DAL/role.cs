@@ -14,6 +14,5 @@ public partial class role
     [StringLength(5)]
     public string rolename { get; set; } = null!;
 
-    [InverseProperty("role")]
     public virtual ICollection<user> users { get; set; } = new List<user>();
 }

@@ -15,7 +15,5 @@ public partial class category
     public string name { get; set; } = null!;
 
     public string? description { get; set; }
-
-    [InverseProperty("category")]
     public virtual ICollection<product> products { get; set; } = new List<product>();
 }

@@ -14,9 +14,9 @@ public partial class country
     [StringLength(100)]
     public string name { get; set; } = null!;
 
-    [InverseProperty("country")]
+
     public virtual ICollection<city> cities { get; set; } = new List<city>();
 
-    [InverseProperty("country")]
+ 
     public virtual ICollection<store> stores { get; set; } = new List<store>();
 }

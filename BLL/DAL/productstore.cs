@@ -15,11 +15,9 @@ public partial class productstore
 
     public int storeid { get; set; }
 
-    [ForeignKey("productid")]
-    [InverseProperty("productstore")]
+
     public virtual product product { get; set; } = null!;
 
-    [ForeignKey("storeid")]
-    [InverseProperty("productstore")]
+
     public virtual store store { get; set; } = null!;
 }
