@@ -2966,7 +2966,10 @@
         },
         "runtime": {
           "bin/placeholder/BLL.dll": {}
-        }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
       }
     }
   },
