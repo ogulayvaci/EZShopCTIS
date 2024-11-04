@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a3dd8946-1ecc-4e45-b07d-2d220997ae73" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/BLL/Services/CategoryService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/Services/CategoryService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/bin/Debug/net8.0/BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/bin/Debug/net8.0/BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/bin/Debug/net8.0/BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/bin/Debug/net8.0/BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/BLL.csproj.EntityFrameworkCore.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/BLL.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/ref/BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/ref/BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/refint/BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/Debug/net8.0/refint/BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BLL/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BLL/obj/rider.project.restore.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/BLL.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/BLL.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/BLL.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/BLL.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/MVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/MVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/MVC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/bin/Debug/net8.0/MVC.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.csproj.AssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/MVC.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/ref/MVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/ref/MVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/refint/MVC.dll" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/Debug/net8.0/refint/MVC.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/MVC.csproj.EntityFrameworkCore.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/rider.project.model.nuget.info" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/rider.project.model.nuget.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MVC/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/MVC/obj/rider.project.restore.info" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="2oCbRFq6z6NJk8pfLgZM0e9tFyH" />
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenDatabaseViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/ogulayvaci/Desktop/EZShopCTIS"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+</project>

@@ -5999,6 +5999,7 @@
       "type": "package",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/8.0.6",
       "files": [
+        ".DS_Store",
         ".nupkg.metadata",
         ".signature.p7s",
         "Generators/ParameterDefinitions/area.json",

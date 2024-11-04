@@ -1,4 +1,5 @@
 using BLL.DAL;
+using BLL.Models;
 using BLL.Services;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,10 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
 // IOC (Inversion of Control) Container
+var connectionString = builder.Configuration.GetConnectionString("Db");
 builder.Services.AddDbContext<Db>(optionsAction =>
-    optionsAction.UseNpgsql("User ID=postgres;Password=patateskral;Host=localhost;Port=5432;Database=EZShopDB;"));
+    optionsAction.UseNpgsql(connectionString));
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IProductService, ProductService>();
+
+var section = builder.Configuration.GetSection("AppSettings");
+section.Bind(new AppSettings());
 
 var app = builder.Build();
 
