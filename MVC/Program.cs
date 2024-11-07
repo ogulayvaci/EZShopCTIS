@@ -15,6 +15,7 @@ builder.Services.AddDbContext<Db>(optionsAction =>
 
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IStoreService, StoreService>();
 
 var section = builder.Configuration.GetSection("AppSettings");
 section.Bind(new AppSettings());
