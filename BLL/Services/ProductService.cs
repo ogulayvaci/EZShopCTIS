@@ -22,7 +22,7 @@ public class ProductService: Service, IProductService
     
     public IQueryable<ProductModel> Query()
     {
-        return _db.products.Include(p => p.category).OrderByDescending(p => p.expirationdate).ThenBy(p => p.stockamount).ThenBy(p => p.name).Select(p => new ProductModel() { Record = p });
+        return _db.products.Include(p => p.category).Include(p=>p.productstores).ThenInclude(ps=>ps.store).OrderByDescending(p => p.expirationdate).ThenBy(p => p.stockamount).ThenBy(p => p.name).Select(p => new ProductModel() { Record = p });
     }
 
     public Service Create(product product)
@@ -46,11 +46,15 @@ public class ProductService: Service, IProductService
         var entity = _db.products.SingleOrDefault(p => p.id == product.id);
         if (entity is null)
             return Error("Product not found!");
+
+        _db.productstores.RemoveRange(entity.productstores);
+        
         entity.name = product.name?.Trim();
         entity.unitprice = product.unitprice;
         entity.stockamount = product.stockamount;
         entity.expirationdate = product.expirationdate;
         entity.categoryid = product.categoryid;
+        entity.productstores = product.productstores;
         _db.products.Update(entity);
         _db.SaveChanges();
         return Success("Product updated successfully.");

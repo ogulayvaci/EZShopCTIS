@@ -20,5 +20,14 @@ public class ProductModel
     public string ExpirationDate => Record.expirationdate.HasValue ? Record.expirationdate.Value.ToString("MM/dd/yyyy") : string.Empty;
 
     public string Category => Record.category?.name;
+
+    public string Stores => string.Join("<br>", Record.productstores?.Select(ps => ps.store?.name));
+
+    [DisplayName("Stores")]
+    public List<int> StoreIds
+    {
+        get => Record.productstores?.Select(ps => ps.storeid).ToList();
+        set => Record.productstores = value.Select(v => new productstore() { storeid = v }).ToList();
+    }
     
 }

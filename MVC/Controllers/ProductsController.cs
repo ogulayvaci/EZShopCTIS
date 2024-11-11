@@ -16,11 +16,12 @@ namespace MVC.Controllers
         private readonly ICategoryService _categoryService;
 
         /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
-        //private readonly IManyToManyRecordService _ManyToManyRecordService;
+        private readonly IStoreService _storeService;
 
         public ProductsController(
             IProductService productService
             , ICategoryService categoryService
+            , IStoreService storeService
 
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
             //, IManyToManyRecordService ManyToManyRecordService
@@ -28,6 +29,7 @@ namespace MVC.Controllers
         {
             _productService = productService;
             _categoryService = categoryService;
+            _storeService = storeService;
 
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
             //_ManyToManyRecordService = ManyToManyRecordService;
@@ -56,6 +58,7 @@ namespace MVC.Controllers
             
             /* Can be uncommented and used for many to many relationships. ManyToManyRecord may be replaced with the related entiy name in the controller and views. */
             //ViewBag.ManyToManyRecordIds = new MultiSelectList(_ManyToManyRecordService.Query().ToList(), "Record.Id", "Name");
+            ViewBag.StoreIds = new MultiSelectList(_storeService.Query().ToList(), "Record.id", "Name");
         }
 
         // GET: Products/Create
