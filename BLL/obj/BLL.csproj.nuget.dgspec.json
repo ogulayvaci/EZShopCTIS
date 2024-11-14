@@ -13,6 +13,7 @@
         "packagesPath": "/Users/ogulayvaci/.nuget/packages/",
         "outputPath": "/Users/ogulayvaci/Desktop/EZShopCTIS/BLL/obj/",
         "projectStyle": "PackageReference",
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "/Users/ogulayvaci/.nuget/NuGet/NuGet.Config"
         ],

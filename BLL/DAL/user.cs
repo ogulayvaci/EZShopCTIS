@@ -11,6 +11,7 @@ public partial class user
     [Key]
     public int id { get; set; }
 
+    [Required]
     [StringLength(10)]
     public string username { get; set; } = null!;
 
@@ -20,7 +21,5 @@ public partial class user
     public bool isactive { get; set; }
 
     public int roleid { get; set; }
-
-  
     public virtual role role { get; set; } = null!;
 }

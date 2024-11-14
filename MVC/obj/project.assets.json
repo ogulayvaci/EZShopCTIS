@@ -8138,6 +8138,7 @@
       "packagesPath": "/Users/ogulayvaci/.nuget/packages/",
       "outputPath": "/Users/ogulayvaci/Desktop/EZShopCTIS/MVC/obj/",
       "projectStyle": "PackageReference",
+      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "/Users/ogulayvaci/.nuget/NuGet/NuGet.Config"
       ],
