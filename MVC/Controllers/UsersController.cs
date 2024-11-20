@@ -1,3 +1,4 @@
+using System.Security.Claims;
 using BLL.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -5,6 +6,8 @@ using BLL.DAL;
 using BLL.Services;
 using BLL.Models;
 using BLL.Services.Bases;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 
 // Generated from Custom Template.
 
@@ -32,11 +35,32 @@ namespace MVC.Controllers
         }
 
         // GET: Users
-        public IActionResult Index()
+        public IActionResult Login()
         {
             // Get collection service logic:
-            var list = _userService.Query().ToList();
-            return View(list);
+            return View();
+        }
+
+        [HttpPost, ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login(UserModel user)
+        {
+            if (ModelState.IsValid)
+            {
+                var umodel = _userService.Query().Where(u=>u.Record.username == user.Record.username && u.Record.password == user.Record.password && u.Record.isactive == true).FirstOrDefault();
+                if (umodel is not null)
+                {
+                    List<Claim> claims = new List<Claim>()
+                    {
+                        new Claim(ClaimTypes.Name, umodel.username),
+                        new Claim(ClaimTypes.Role, umodel.role)
+                    };
+                    ClaimsIdentity identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                    ClaimsPrincipal principal = new ClaimsPrincipal(identity);
+                    await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                    return RedirectToAction("Index", "Home");
+                }
+            }
+            return View();
         }
     }
 }

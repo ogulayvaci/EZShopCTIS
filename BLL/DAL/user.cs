@@ -13,13 +13,13 @@ public partial class user
 
     [Required]
     [StringLength(10)]
-    public string username { get; set; } = null!;
+    public string username { get; set; }
 
     [StringLength(8)]
-    public string password { get; set; } = null!;
+    public string password { get; set; }
 
     public bool isactive { get; set; }
 
     public int roleid { get; set; }
-    public virtual role role { get; set; } = null!;
+    public virtual role role { get; set; }
 }
