@@ -14,8 +14,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(config =>
 {
-    config.LoginPath = "/User/Login";
-    config.AccessDeniedPath = "/User/Login";
+    config.LoginPath = "/Users/Login";
+    config.AccessDeniedPath = "/Users/Login";
     config.ExpireTimeSpan = TimeSpan.FromMinutes(60);
     config.SlidingExpiration = true;
 });
