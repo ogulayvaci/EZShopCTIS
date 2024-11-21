@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using BLL.Services;
 using BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 // Generated from Custom Template.
 
 namespace MVC.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class CategoriesController : MvcController
     {
         // Service injections:
@@ -31,6 +33,7 @@ namespace MVC.Controllers
         }
 
         // GET: Categories
+        
         public IActionResult Index()
         {
             // Get collection service logic:

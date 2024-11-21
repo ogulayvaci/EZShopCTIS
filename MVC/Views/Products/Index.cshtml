@@ -72,11 +72,15 @@
 					        <td>
 						        @Html.DisplayFor(modelItem => item.Category)
 					        </td>
-					        <td class="text-end w-25">
-						        <a asp-action="Details" asp-route-id="@item.Record.id">Details</a>&nbsp;|&nbsp;
-						        <a asp-action="Edit" asp-route-id="@item.Record.id">Edit</a>&nbsp;|&nbsp;
-						        <a asp-action="Delete" asp-route-id="@item.Record.id">Delete</a>
-					        </td>
+                            <td class="text-end w-25">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <a asp-action="Details" asp-route-id="@item.Record.id">Details</a> @:&nbsp;|&nbsp;
+                                    <a asp-action="Edit" asp-route-id="@item.Record.id">Edit</a> @:&nbsp;|&nbsp;
+                                    <a asp-action="Delete" asp-route-id="@item.Record.id">Delete</a>
+                                }
+                                
+                            </td>
 				        </tr>
 		            }
                 </tbody>

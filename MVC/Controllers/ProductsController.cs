@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using BLL.Services;
 using BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 // Generated from Custom Template.
 
 namespace MVC.Controllers
 {
+    [Authorize]
     public class ProductsController : MvcController
     {
         // Service injections:
@@ -44,6 +46,7 @@ namespace MVC.Controllers
         }
 
         // GET: Products/Details/5
+        [AllowAnonymous]
         public IActionResult Details(int id)
         {
             // Get item service logic:
@@ -118,6 +121,7 @@ namespace MVC.Controllers
         }
 
         // GET: Products/Delete/5
+        [Authorize(Roles = "Admin")]
         public IActionResult Delete(int id)
         {
             // Get item to delete service logic:
@@ -128,6 +132,7 @@ namespace MVC.Controllers
         // POST: Products/Delete
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Admin")]
         public IActionResult DeleteConfirmed(int id)
         {
             // Delete item service logic:

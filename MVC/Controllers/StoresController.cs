@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using BLL.Services;
 using BLL.Models;
+using Microsoft.AspNetCore.Authorization;
 
 // Generated from Custom Template.
 
 namespace MVC.Controllers
 {
+    [Authorize(Roles = "Admin, User")] // [Authorize] : this can be used also, but there are only 2 users so [Authorize] is enough.
     public class StoresController : MvcController
     {
         // Service injections:
