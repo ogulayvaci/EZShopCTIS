@@ -31,8 +31,17 @@ builder.Services.AddScoped<IStoreService, StoreService>();
 // builder.Services.AddScoped(typeof(IService<user, UserModel>), typeof(UserService));
 builder.Services.AddScoped<IService<user,UserModel>, UserService>();
 
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<HttpServiceBase, HttpService>();
+
 var section = builder.Configuration.GetSection("AppSettings");
 section.Bind(new AppSettings());
+
+builder.Services.AddSession(config =>
+{
+    config.IdleTimeout = TimeSpan.FromMinutes(60);
+    // config.IOTimeout = TimeSpan.MaxValue;
+});
 
 var app = builder.Build();
 
@@ -51,8 +60,10 @@ app.UseRouting();
 
 // Authentication:
 app.UseAuthentication();
-
 app.UseAuthorization();
+
+// Session : 
+app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
